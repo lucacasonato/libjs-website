@@ -65,7 +65,7 @@ async function createREPL(elements) {
         }
         return true;
       });
-      globalThis.run.onclick = () => { alert(2); repl.execute(node, editor.value); alert("go") };
+      document.getElementById("run").onclick = () => { alert(2); repl.execute(node, editor.value); alert("go") };
       node.addEventListener("mouseenter", () => {
         node._related.forEach((other) => {
           other.classList.add("hovered-related");
