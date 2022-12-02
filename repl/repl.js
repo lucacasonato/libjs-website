@@ -1,6 +1,8 @@
 if (typeof Module === "undefined")
   throw new Error("LibJS.js must be loaded before repl.js");
 
+window.onerror = (e) => alert(e.message);
+
 function globalDisplayToUser(text) {
   globalDisplayToUser.repl.push(text);
 }
